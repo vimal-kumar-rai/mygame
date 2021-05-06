@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Corner</title>
+  <link rel="stylesheet" href="game.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div>
+
+  <form>
+    <h1 class="h1">Test Your Luck</h1>
+
+
+
+    <label>
+        <input id="answer" type="text" class="input" n placeholder="ENTER ANY ONE DIGIT NUMBER"/>
+        <div class="line-box">
+          <div class="line"></div>
+        </div>
+    </label>
+
+    <button id="myButton" type="submit">Check My Luck</button>
+  </form>
+</div>
+<script type="text/javascript">
+document.getElementById("myButton").onclick=function() {
+var x=Math.random();
+x=9*x;
+x=Math.floor(x)+1;
+if (x==document.getElementById("answer").value) {
+alert("🎊Hurrah🎊 You Are Very Lucky !");
+} else {
+alert(" 😭Opps😭 The number was "+x);
+}
+}
+</script>
+ </body>
+</html>
